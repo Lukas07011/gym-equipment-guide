@@ -9,6 +9,21 @@
     </view>
   </view>
 
+  <view class="trust-strip">
+    <view>
+      <text class="trust-value">{{equipmentCount}}</text>
+      <text class="trust-label">常见器械</text>
+    </view>
+    <view>
+      <text class="trust-value">0</text>
+      <text class="trust-label">照片上传</text>
+    </view>
+    <view>
+      <text class="trust-value">3步</text>
+      <text class="trust-label">找到用法</text>
+    </view>
+  </view>
+
   <view class="quick-actions">
     <button class="primary-button" bindtap="goFinder">我看到一台器械</button>
     <button class="ghost-button" bindtap="goLibrary">查看器械图鉴</button>
@@ -41,6 +56,21 @@
       </view>
     </view>
   </view>
+
+  <view class="section-title">
+    <text>先从常见器械试试</text>
+    <text class="muted">适合第一次体验</text>
+  </view>
+
+  <scroll-view class="featured-scroll" scroll-x enhanced show-scrollbar="{{false}}">
+    <view class="featured-row">
+      <view wx:for="{{featuredItems}}" wx:key="id" class="featured-card card" bindtap="openDetail" data-id="{{item.id}}">
+        <text class="featured-name">{{item.name}}</text>
+        <text class="featured-meta">{{item.bodyPartsText}}</text>
+        <text class="featured-action">查看教学</text>
+      </view>
+    </view>
+  </scroll-view>
 
   <view class="section-title">
     <text>我的收藏</text>

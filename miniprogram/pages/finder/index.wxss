@@ -17,6 +17,42 @@
   line-height: 1.55;
 }
 
+.progress-card {
+  margin-top: 24rpx;
+  padding: 24rpx;
+}
+
+.progress-top {
+  display: flex;
+  justify-content: space-between;
+  color: #14201b;
+  font-size: 28rpx;
+  font-weight: 850;
+}
+
+.progress-track {
+  height: 14rpx;
+  margin-top: 18rpx;
+  border-radius: 999rpx;
+  overflow: hidden;
+  background: #edf3ef;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999rpx;
+  background: #147a58;
+  transition: width 180ms ease;
+}
+
+.progress-copy {
+  display: block;
+  margin-top: 16rpx;
+  color: #68756f;
+  font-size: 25rpx;
+  line-height: 1.45;
+}
+
 .action-row {
   display: grid;
   grid-template-columns: 220rpx 1fr;
@@ -43,6 +79,17 @@
 .result-name {
   display: block;
   font-size: 32rpx;
+  font-weight: 850;
+}
+
+.best-badge {
+  display: inline-flex;
+  margin-bottom: 12rpx;
+  padding: 7rpx 12rpx;
+  border-radius: 999rpx;
+  color: #8d321f;
+  background: #ffe6df;
+  font-size: 22rpx;
   font-weight: 850;
 }
 
@@ -83,7 +130,7 @@
 }
 
 .score text:first-child {
-  font-size: 30rpx;
+  font-size: 28rpx;
   font-weight: 900;
 }
 

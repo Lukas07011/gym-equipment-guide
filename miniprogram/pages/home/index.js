@@ -3,7 +3,12 @@ const { equipment } = require("../../data/equipment");
 Page({
   data: {
     favorites: [],
-    favoriteItems: []
+    favoriteItems: [],
+    equipmentCount: equipment.length,
+    featuredItems: equipment.slice(0, 4).map((item) => ({
+      ...item,
+      bodyPartsText: item.bodyParts.join(" / ")
+    }))
   },
 
   onShow() {

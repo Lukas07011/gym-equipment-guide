@@ -3,7 +3,8 @@ const { equipment } = require("../../data/equipment");
 Page({
   data: {
     item: null,
-    isFavorite: false
+    isFavorite: false,
+    primaryBody: ""
   },
 
   onLoad(options) {
@@ -16,6 +17,7 @@ Page({
           ...item,
           bodyPartsText: item.bodyParts.join(" / ")
         },
+        primaryBody: item.bodyParts[0],
         isFavorite: favorites.includes(item.id)
       });
     }
@@ -34,5 +36,9 @@ Page({
       title: exists ? "已取消收藏" : "已收藏",
       icon: "success"
     });
+  },
+
+  goFinder() {
+    wx.switchTab({ url: "/pages/finder/index" });
   }
 });

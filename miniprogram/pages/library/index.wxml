@@ -1,4 +1,9 @@
 <view class="page">
+  <view class="library-head">
+    <text class="library-title">器械图鉴</text>
+    <text class="library-subtitle">知道名字就搜索，不知道名字就按训练部位浏览。</text>
+  </view>
+
   <view class="search-card card">
     <input value="{{keyword}}" placeholder="搜索：推胸 / 下拉 / 腿举 / 划船" bindinput="onSearch" confirm-type="search" />
   </view>
@@ -26,6 +31,9 @@
       <text class="equipment-motion">{{item.motion}}</text>
       <view class="feature-line">
         <text wx:for="{{item.featuresPreview}}" wx:key="*this" class="feature-pill">{{item}}</text>
+      </view>
+      <view class="card-footer">
+        <text>查看调节方法和安全提醒</text>
       </view>
     </view>
   </view>

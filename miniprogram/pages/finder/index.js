@@ -7,7 +7,12 @@ Page({
     selectedBody: "全部",
     selectedFeatures: [],
     selectedFeaturesMap: {},
-    matches: []
+    matches: [],
+    progressTitle: "先观察器械",
+    progressPercent: 20,
+    progressCopy: "选一个训练部位，再勾选 1-3 个明显特征，结果会更准。",
+    resultTitle: "先给你一些常见器械",
+    isFocused: false
   },
 
   onLoad() {
@@ -38,16 +43,20 @@ Page({
 
   updateMatches() {
     const { selectedBody, selectedFeatures } = this.data;
+    const hasBody = selectedBody !== "全部";
+    const selectedCount = selectedFeatures.length;
     const matches = equipment
       .map((item) => {
-        const bodyScore = selectedBody === "全部" || item.bodyParts.includes(selectedBody) ? 2 : 0;
+        const bodyScore = selectedBody === "全部" || item.bodyParts.includes(selectedBody) ? (hasBody ? 2 : 1) : 0;
         const matchedFeatures = selectedFeatures.filter((feature) => item.features.includes(feature));
         const score = bodyScore + matchedFeatures.length;
+        const confidence = score >= 4 ? "高" : score >= 2 ? "中" : "低";
         return {
           ...item,
           score,
+          confidence,
           matchedTags: [
-            ...(bodyScore ? [selectedBody === "全部" ? "全部部位" : selectedBody] : []),
+            ...(bodyScore ? [selectedBody === "全部" ? "常见" : selectedBody] : []),
             ...matchedFeatures
           ].slice(0, 4)
         };
@@ -56,7 +65,17 @@ Page({
       .sort((a, b) => b.score - a.score)
       .slice(0, 5);
 
-    this.setData({ matches });
+    const progressPercent = Math.min(100, 20 + (hasBody ? 35 : 0) + Math.min(selectedCount, 3) * 15);
+    const isFocused = hasBody || selectedCount > 0;
+    const progressTitle = progressPercent >= 80 ? "可以确认了" : isFocused ? "正在缩小范围" : "先观察器械";
+    const progressCopy = progressPercent >= 80
+      ? "现在可以点开最可能的器械，对照详情确认是不是眼前这台。"
+      : isFocused
+        ? "继续补充一个最明显的外观特征，结果会更靠近真实器械。"
+        : "选一个训练部位，再勾选 1-3 个明显特征，结果会更准。";
+    const resultTitle = isFocused ? "可能是这些" : "先给你一些常见器械";
+
+    this.setData({ matches, progressPercent, progressTitle, progressCopy, resultTitle, isFocused });
   },
 
   resetFilters() {

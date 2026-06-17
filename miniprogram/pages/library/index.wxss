@@ -1,3 +1,21 @@
+.library-head {
+  padding: 16rpx 0 24rpx;
+}
+
+.library-title {
+  display: block;
+  font-size: 46rpx;
+  font-weight: 900;
+}
+
+.library-subtitle {
+  display: block;
+  margin-top: 12rpx;
+  color: #68756f;
+  font-size: 27rpx;
+  line-height: 1.5;
+}
+
 .search-card {
   padding: 0 22rpx;
 }
@@ -96,6 +114,15 @@ input {
   background: #e4f7ef;
   font-size: 22rpx;
   font-weight: 750;
+}
+
+.card-footer {
+  margin: 20rpx -24rpx -24rpx;
+  padding: 18rpx 24rpx;
+  border-top: 1rpx solid #edf3ef;
+  color: #147a58;
+  font-size: 25rpx;
+  font-weight: 800;
 }
 
 .empty {

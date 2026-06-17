@@ -4,6 +4,17 @@
     <text class="subtitle">不用拍照，不用二维码。选几个你能观察到的特征，我会把可能的器械排出来。</text>
   </view>
 
+  <view class="progress-card card">
+    <view class="progress-top">
+      <text>{{progressTitle}}</text>
+      <text>{{progressPercent}}%</text>
+    </view>
+    <view class="progress-track">
+      <view class="progress-fill" style="width: {{progressPercent}}%;"></view>
+    </view>
+    <text class="progress-copy">{{progressCopy}}</text>
+  </view>
+
   <view class="section-title">
     <text>先选训练部位</text>
     <text class="muted">{{selectedBody}}</text>
@@ -21,18 +32,19 @@
   </view>
 
   <view class="action-row">
-    <button class="ghost-button" bindtap="resetFilters">重选</button>
+    <button class="ghost-button" bindtap="resetFilters">清空</button>
     <button class="primary-button" bindtap="goLibrary">看完整图鉴</button>
   </view>
 
   <view class="section-title">
-    <text>可能是这些</text>
+    <text>{{resultTitle}}</text>
     <text class="muted">{{matches.length}} 个结果</text>
   </view>
 
   <view wx:if="{{matches.length}}" class="result-list">
     <view wx:for="{{matches}}" wx:key="id" class="result-card card" bindtap="openDetail" data-id="{{item.id}}">
       <view class="result-main">
+        <text wx:if="{{index === 0 && isFocused}}" class="best-badge">最可能</text>
         <text class="result-name">{{item.name}}</text>
         <text class="result-motion">{{item.motion}}</text>
         <view class="tag-line">
@@ -40,8 +52,8 @@
         </view>
       </view>
       <view class="score">
-        <text>{{item.score}}</text>
-        <text>匹配</text>
+        <text>{{item.confidence}}</text>
+        <text>{{item.score}}项</text>
       </view>
     </view>
   </view>

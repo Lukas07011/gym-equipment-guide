@@ -60,6 +60,39 @@
   margin-top: 28rpx;
 }
 
+.trust-strip {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12rpx;
+  margin-top: -44rpx;
+}
+
+.trust-strip view {
+  min-height: 106rpx;
+  padding: 18rpx 10rpx;
+  border: 1rpx solid #dfe8e2;
+  border-radius: 16rpx;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 12rpx 28rpx rgba(20, 32, 27, 0.08);
+}
+
+.trust-value {
+  display: block;
+  color: #147a58;
+  font-size: 34rpx;
+  font-weight: 900;
+}
+
+.trust-label {
+  display: block;
+  margin-top: 6rpx;
+  color: #68756f;
+  font-size: 23rpx;
+}
+
 .steps {
   padding: 24rpx;
 }
@@ -107,6 +140,46 @@
 .favorite-list {
   display: grid;
   gap: 16rpx;
+}
+
+.featured-scroll {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.featured-row {
+  display: inline-flex;
+  gap: 16rpx;
+  padding-bottom: 4rpx;
+}
+
+.featured-card {
+  width: 286rpx;
+  padding: 24rpx;
+  white-space: normal;
+}
+
+.featured-name {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 850;
+}
+
+.featured-meta {
+  display: block;
+  min-height: 72rpx;
+  margin-top: 10rpx;
+  color: #68756f;
+  font-size: 24rpx;
+  line-height: 1.45;
+}
+
+.featured-action {
+  display: inline-flex;
+  margin-top: 16rpx;
+  color: #147a58;
+  font-size: 25rpx;
+  font-weight: 800;
 }
 
 .favorite-card {
