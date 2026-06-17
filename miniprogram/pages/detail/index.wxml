@@ -1,5 +1,6 @@
 <view wx:if="{{item}}" class="page detail-page">
   <view class="detail-head card">
+    <image class="hero-equipment" src="{{item.image}}" mode="aspectFill"></image>
     <view>
       <text class="level">{{item.level}}</text>
       <text class="name">{{item.name}}</text>
@@ -20,6 +21,30 @@
     <view class="fact card">
       <text class="fact-value">{{primaryBody}}</text>
       <text class="fact-label">主要部位</text>
+    </view>
+  </view>
+
+  <view class="section-title">
+    <text>视频示例</text>
+    <text class="muted">{{item.video.duration}}</text>
+  </view>
+  <view class="video-card card">
+    <video wx:if="{{item.video.url}}" class="demo-video" src="{{item.video.url}}" poster="{{item.image}}" controls object-fit="cover"></video>
+    <view wx:else class="video-placeholder">
+      <image class="video-poster" src="{{item.image}}" mode="aspectFill"></image>
+      <view class="play-mark">
+        <text>▶</text>
+      </view>
+    </view>
+    <view class="video-copy">
+      <text class="video-title">{{item.video.title}}</text>
+      <text class="video-status">{{item.video.status}}</text>
+      <view class="shot-list">
+        <view wx:for="{{item.video.shots}}" wx:key="*this" class="shot-item">
+          <text class="shot-dot"></text>
+          <text>{{item}}</text>
+        </view>
+      </view>
     </view>
   </view>
 

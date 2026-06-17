@@ -65,6 +65,7 @@
   <scroll-view class="featured-scroll" scroll-x enhanced show-scrollbar="{{false}}">
     <view class="featured-row">
       <view wx:for="{{featuredItems}}" wx:key="id" class="featured-card card" bindtap="openDetail" data-id="{{item.id}}">
+        <image class="featured-image" src="{{item.image}}" mode="aspectFill"></image>
         <text class="featured-name">{{item.name}}</text>
         <text class="featured-meta">{{item.bodyPartsText}}</text>
         <text class="featured-action">查看教学</text>

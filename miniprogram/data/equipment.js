@@ -116,8 +116,96 @@ const equipment = [
 const bodyParts = ["全部", "胸部", "背部", "腿部", "臀部", "肩部", "手臂", "核心"];
 const featureOptions = ["坐着用", "站着用", "往前推", "往下拉", "往后拉", "用腿蹬", "有拉绳", "有踏板", "有长杆", "有靠背", "有配重插销"];
 
+const mediaById = {
+  "lat-pulldown": {
+    image: "/assets/equipment/lat-pulldown.png",
+    video: {
+      title: "高位下拉新手示范",
+      duration: "35-45 秒",
+      url: "",
+      status: "待接入实拍视频",
+      shots: ["镜头 1：展示座椅和大腿垫调节", "镜头 2：正面示范下拉路径", "镜头 3：侧面展示不要后仰猛拉"]
+    }
+  },
+  "chest-press": {
+    image: "/assets/equipment/chest-press.png",
+    video: {
+      title: "坐姿推胸机新手示范",
+      duration: "30-40 秒",
+      url: "",
+      status: "待接入实拍视频",
+      shots: ["镜头 1：座椅高度对齐胸中部", "镜头 2：平稳向前推", "镜头 3：展示肩膀不要前顶"]
+    }
+  },
+  "leg-press": {
+    image: "/assets/equipment/leg-press.png",
+    video: {
+      title: "腿举机新手示范",
+      duration: "40-50 秒",
+      url: "",
+      status: "待接入实拍视频",
+      shots: ["镜头 1：双脚站位和膝盖方向", "镜头 2：安全扣和下放幅度", "镜头 3：展示膝盖不要锁死"]
+    }
+  },
+  "seated-row": {
+    image: "/assets/equipment/seated-row.png",
+    video: {
+      title: "坐姿划船机新手示范",
+      duration: "35-45 秒",
+      url: "",
+      status: "待接入实拍视频",
+      shots: ["镜头 1：脚踩踏板和躯干直立", "镜头 2：握把拉到腹部", "镜头 3：展示不要身体大幅晃动"]
+    }
+  },
+  "leg-extension": {
+    image: "/assets/equipment/leg-extension.png",
+    video: {
+      title: "腿屈伸机新手示范",
+      duration: "30-40 秒",
+      url: "",
+      status: "待接入实拍视频",
+      shots: ["镜头 1：膝盖轴心对齐机器转轴", "镜头 2：小腿伸直并控制下放", "镜头 3：展示不要甩腿"]
+    }
+  },
+  "cable-machine": {
+    image: "/assets/equipment/cable-machine.png",
+    video: {
+      title: "龙门架绳索机基础示范",
+      duration: "45-60 秒",
+      url: "",
+      status: "待接入实拍视频",
+      shots: ["镜头 1：确认滑轮高度和插销", "镜头 2：演示一个低重量基础动作", "镜头 3：展示身体不要被重量带走"]
+    }
+  },
+  "smith-machine": {
+    image: "/assets/equipment/smith-machine.png",
+    video: {
+      title: "史密斯机安全入门",
+      duration: "45-60 秒",
+      url: "",
+      status: "待接入实拍视频",
+      shots: ["镜头 1：空杆旋转解锁和挂回", "镜头 2：设置安全限位", "镜头 3：强调第一次不要直接上重量"]
+    }
+  },
+  "pec-deck": {
+    image: "/assets/equipment/pec-deck.png",
+    video: {
+      title: "蝴蝶机夹胸新手示范",
+      duration: "30-40 秒",
+      url: "",
+      status: "待接入实拍视频",
+      shots: ["镜头 1：座椅高度和肩膀位置", "镜头 2：向中间夹胸并停顿", "镜头 3：展示打开不要过深"]
+    }
+  }
+};
+
+const equipmentWithMedia = equipment.map((item) => ({
+  ...item,
+  ...mediaById[item.id]
+}));
+
 module.exports = {
-  equipment,
+  equipment: equipmentWithMedia,
   bodyParts,
   featureOptions
 };

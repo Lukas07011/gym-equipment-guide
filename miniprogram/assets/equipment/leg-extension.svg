@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420">
+  <rect width="720" height="420" rx="28" fill="#eef8f3"/>
+  <rect x="108" y="62" width="504" height="288" rx="22" fill="#fff" stroke="#cddbd3" stroke-width="6"/>
+  <rect x="210" y="174" width="148" height="74" rx="14" fill="#147a58"/>
+  <rect x="226" y="110" width="62" height="92" rx="12" fill="#3f5149"/>
+  <path d="M356 212h118" stroke="#14201b" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="494" cy="214" r="28" fill="#ff735c"/>
+  <path d="M438 214v70" stroke="#14201b" stroke-width="12" stroke-linecap="round"/>
+  <rect x="500" y="116" width="48" height="184" rx="12" fill="#cddbd3"/>
+  <text x="360" y="386" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#14201b">坐姿腿屈伸机</text>
+</svg>

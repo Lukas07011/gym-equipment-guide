@@ -72,8 +72,17 @@
   padding: 24rpx;
 }
 
+.result-image {
+  flex: 0 0 148rpx;
+  width: 148rpx;
+  height: 148rpx;
+  border-radius: 14rpx;
+  background: #eef8f3;
+}
+
 .result-main {
   min-width: 0;
+  flex: 1;
 }
 
 .result-name {

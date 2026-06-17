@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420">
+  <rect width="720" height="420" rx="28" fill="#eef8f3"/>
+  <rect x="110" y="54" width="500" height="300" rx="22" fill="#fff" stroke="#cddbd3" stroke-width="6"/>
+  <path d="M190 330V88h340v242" fill="none" stroke="#147a58" stroke-width="18" stroke-linecap="round"/>
+  <path d="M246 112h228" stroke="#14201b" stroke-width="16" stroke-linecap="round"/>
+  <path d="M360 112v82" stroke="#14201b" stroke-width="8" stroke-linecap="round"/>
+  <path d="M300 194h120" stroke="#ff735c" stroke-width="14" stroke-linecap="round"/>
+  <rect x="286" y="254" width="148" height="44" rx="12" fill="#147a58"/>
+  <rect x="258" y="300" width="204" height="24" rx="12" fill="#3f5149"/>
+  <text x="360" y="386" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#14201b">高位下拉机</text>
+</svg>

@@ -21,6 +21,7 @@
 
   <view class="library-list">
     <view wx:for="{{filtered}}" wx:key="id" class="equipment-card card" bindtap="openDetail" data-id="{{item.id}}">
+      <image class="equipment-image" src="{{item.image}}" mode="aspectFill"></image>
       <view class="equipment-top">
         <view>
           <text class="equipment-name">{{item.name}}</text>
@@ -33,7 +34,7 @@
         <text wx:for="{{item.featuresPreview}}" wx:key="*this" class="feature-pill">{{item}}</text>
       </view>
       <view class="card-footer">
-        <text>查看调节方法和安全提醒</text>
+        <text>查看图片、视频示例和安全提醒</text>
       </view>
     </view>
   </view>

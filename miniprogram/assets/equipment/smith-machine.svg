@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420">
+  <rect width="720" height="420" rx="28" fill="#eef8f3"/>
+  <rect x="104" y="60" width="512" height="292" rx="22" fill="#fff" stroke="#cddbd3" stroke-width="6"/>
+  <path d="M212 316V104M508 316V104" stroke="#147a58" stroke-width="18" stroke-linecap="round"/>
+  <path d="M198 138h324" stroke="#14201b" stroke-width="16" stroke-linecap="round"/>
+  <path d="M250 252h220" stroke="#ff735c" stroke-width="14" stroke-linecap="round"/>
+  <path d="M240 178h36M444 178h36M240 222h36M444 222h36" stroke="#3f5149" stroke-width="10" stroke-linecap="round"/>
+  <rect x="286" y="278" width="148" height="20" rx="10" fill="#cddbd3"/>
+  <text x="360" y="386" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#14201b">史密斯机</text>
+</svg>

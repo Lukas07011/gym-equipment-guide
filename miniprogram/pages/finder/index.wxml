@@ -43,6 +43,7 @@
 
   <view wx:if="{{matches.length}}" class="result-list">
     <view wx:for="{{matches}}" wx:key="id" class="result-card card" bindtap="openDetail" data-id="{{item.id}}">
+      <image class="result-image" src="{{item.image}}" mode="aspectFill"></image>
       <view class="result-main">
         <text wx:if="{{index === 0 && isFocused}}" class="best-badge">最可能</text>
         <text class="result-name">{{item.name}}</text>
