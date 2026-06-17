@@ -1,0 +1,19 @@
+{
+  "description": "练器助手微信小程序",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.8.12",
+  "appid": "touristappid",
+  "projectname": "gym-equipment-guide",
+  "miniprogramRoot": "miniprogram/"
+}

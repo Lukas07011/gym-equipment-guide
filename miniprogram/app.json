@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/finder/index",
+    "pages/library/index",
+    "pages/detail/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "练器助手",
+    "navigationBarBackgroundColor": "#f6faf7",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f6faf7"
+  },
+  "tabBar": {
+    "color": "#68756f",
+    "selectedColor": "#147a58",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/finder/index",
+        "text": "找器械"
+      },
+      {
+        "pagePath": "pages/library/index",
+        "text": "图鉴"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

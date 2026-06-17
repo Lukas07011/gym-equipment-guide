@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitStart AI</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="phone" aria-label="FitStart AI prototype">
+        <header class="hero">
+          <img src="../assets/hero-fitness.jpg" alt="居家健身场景" />
+          <div class="heroShade"></div>
+          <nav class="topbar">
+            <span class="brand">FitStart AI</span>
+            <button class="iconButton" id="resetButton" title="重置数据" aria-label="重置数据">↻</button>
+          </nav>
+          <div class="heroCopy">
+            <p>今日计划</p>
+            <h1 id="todayTitle">生成你的第一周训练</h1>
+            <span id="todayMeta">3 分钟完成设置</span>
+          </div>
+        </header>
+
+        <section class="stats" aria-label="训练进度">
+          <article>
+            <strong id="streakCount">0</strong>
+            <span>连续天数</span>
+          </article>
+          <article>
+            <strong id="doneCount">0</strong>
+            <span>完成次数</span>
+          </article>
+          <article>
+            <strong id="weekRate">0%</strong>
+            <span>本周完成</span>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="sectionTitle">
+            <h2>训练画像</h2>
+            <button id="generateButton">生成计划</button>
+          </div>
+
+          <form class="profileGrid" id="profileForm">
+            <label>
+              <span>目标</span>
+              <select name="goal">
+                <option value="fatLoss">减脂入门</option>
+                <option value="shape">塑形紧致</option>
+                <option value="energy">改善体能</option>
+              </select>
+            </label>
+            <label>
+              <span>每周频次</span>
+              <select name="frequency">
+                <option value="3">每周 3 次</option>
+                <option value="4">每周 4 次</option>
+                <option value="5">每周 5 次</option>
+              </select>
+            </label>
+            <label>
+              <span>单次时长</span>
+              <select name="duration">
+                <option value="15">15 分钟</option>
+                <option value="25">25 分钟</option>
+                <option value="35">35 分钟</option>
+              </select>
+            </label>
+            <label>
+              <span>器械</span>
+              <select name="equipment">
+                <option value="none">无器械</option>
+                <option value="band">弹力带</option>
+                <option value="dumbbell">哑铃</option>
+              </select>
+            </label>
+            <label class="wide">
+              <span>身体状态</span>
+              <select name="condition">
+                <option value="normal">无明显不适</option>
+                <option value="knee">膝盖敏感</option>
+                <option value="back">腰背敏感</option>
+                <option value="neck">肩颈紧张</option>
+              </select>
+            </label>
+          </form>
+        </section>
+
+        <section class="panel">
+          <div class="tabs" role="tablist" aria-label="视图切换">
+            <button class="tab active" data-view="today">今日</button>
+            <button class="tab" data-view="week">本周</button>
+            <button class="tab" data-view="insight">反馈</button>
+          </div>
+
+          <div id="todayView" class="view active">
+            <div class="workoutCard">
+              <div>
+                <p id="workoutType">等待生成</p>
+                <h2 id="workoutName">你的低门槛训练会出现在这里</h2>
+                <span id="workoutHint">选择画像后生成计划</span>
+              </div>
+              <button id="completeButton" disabled>完成</button>
+            </div>
+            <ul class="moves" id="movesList"></ul>
+          </div>
+
+          <div id="weekView" class="view">
+            <div class="weekList" id="weekList"></div>
+          </div>
+
+          <div id="insightView" class="view">
+            <article class="insight">
+              <h2 id="insightTitle">先完成一次计划生成</h2>
+              <p id="insightText">首版用规则模拟 AI：系统会根据你的目标、时间、器械和身体状态生成训练结构，并在打卡后给出反馈。</p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

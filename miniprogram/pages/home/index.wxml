@@ -1,0 +1,63 @@
+<view class="page home-page">
+  <view class="hero">
+    <image class="hero-image" src="/assets/hero-fitness.jpg" mode="aspectFill"></image>
+    <view class="hero-shade"></view>
+    <view class="hero-copy">
+      <text class="eyebrow">新手健身器械指南</text>
+      <text class="hero-title">看见器械，不再不知道怎么练</text>
+      <text class="hero-subtitle">通过训练部位和外观特征，快速定位器械，查看新手使用步骤和安全提醒。</text>
+    </view>
+  </view>
+
+  <view class="quick-actions">
+    <button class="primary-button" bindtap="goFinder">我看到一台器械</button>
+    <button class="ghost-button" bindtap="goLibrary">查看器械图鉴</button>
+  </view>
+
+  <view class="section-title">
+    <text>今天可以这样用</text>
+  </view>
+
+  <view class="steps card">
+    <view class="step">
+      <text class="step-num">1</text>
+      <view>
+        <text class="step-title">选择训练部位</text>
+        <text class="step-text">比如胸、背、腿，先缩小范围。</text>
+      </view>
+    </view>
+    <view class="step">
+      <text class="step-num">2</text>
+      <view>
+        <text class="step-title">勾选外观特征</text>
+        <text class="step-text">坐着用、往下拉、有踏板、有拉绳。</text>
+      </view>
+    </view>
+    <view class="step">
+      <text class="step-num">3</text>
+      <view>
+        <text class="step-title">确认器械并学习</text>
+        <text class="step-text">查看调节方法、动作步骤、常见错误和安全提醒。</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="section-title">
+    <text>我的收藏</text>
+    <text class="muted">{{favorites.length}} 个</text>
+  </view>
+
+  <view wx:if="{{favorites.length}}" class="favorite-list">
+    <view wx:for="{{favoriteItems}}" wx:key="id" class="favorite-card card" bindtap="openDetail" data-id="{{item.id}}">
+      <text class="favorite-name">{{item.name}}</text>
+      <text class="favorite-meta">{{item.bodyPartsText}} · {{item.level}}</text>
+    </view>
+  </view>
+  <view wx:else class="empty card">
+    <text>还没有收藏。看到常用器械时，可以先收藏，之后进健身房会更快找到。</text>
+  </view>
+
+  <view class="notice">
+    <text>安全提示：本产品提供新手学习参考，不能替代专业教练或医疗建议。训练中如有疼痛，请立即停止。</text>
+  </view>
+</view>

@@ -1,0 +1,102 @@
+page {
+  min-height: 100%;
+  color: #14201b;
+  background: #f6faf7;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+view,
+text,
+button,
+input,
+scroll-view {
+  box-sizing: border-box;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  line-height: 1.2;
+}
+
+button::after {
+  border: 0;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 28rpx 28rpx 48rpx;
+}
+
+.card {
+  border: 1rpx solid #dfe8e2;
+  border-radius: 16rpx;
+  background: #ffffff;
+  box-shadow: 0 12rpx 28rpx rgba(20, 32, 27, 0.05);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30rpx 0 16rpx;
+}
+
+.section-title text:first-child {
+  font-size: 34rpx;
+  font-weight: 800;
+}
+
+.muted {
+  color: #68756f;
+}
+
+.primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 88rpx;
+  border-radius: 16rpx;
+  color: #ffffff;
+  background: #147a58;
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.ghost-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 76rpx;
+  border: 1rpx solid #cddbd3;
+  border-radius: 16rpx;
+  color: #147a58;
+  background: #ffffff;
+  font-size: 28rpx;
+  font-weight: 750;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.chip {
+  min-height: 64rpx;
+  padding: 0 24rpx;
+  border: 1rpx solid #dfe8e2;
+  border-radius: 999rpx;
+  color: #3f5149;
+  background: #ffffff;
+  font-size: 26rpx;
+}
+
+.chip.active {
+  border-color: #147a58;
+  color: #147a58;
+  background: #e4f7ef;
+  font-weight: 800;
+}

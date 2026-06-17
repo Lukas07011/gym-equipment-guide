@@ -1,0 +1,60 @@
+<view wx:if="{{item}}" class="page detail-page">
+  <view class="detail-head card">
+    <view>
+      <text class="level">{{item.level}}</text>
+      <text class="name">{{item.name}}</text>
+      <text class="meta">{{item.bodyPartsText}}</text>
+    </view>
+    <button class="favorite {{isFavorite ? 'active' : ''}}" bindtap="toggleFavorite">{{isFavorite ? '已收藏' : '收藏'}}</button>
+  </view>
+
+  <view class="summary card">
+    <text>{{item.motion}}</text>
+  </view>
+
+  <view class="section-title">
+    <text>先这样调</text>
+  </view>
+  <view class="info-card card">
+    <view wx:for="{{item.setup}}" wx:key="*this" class="line">
+      <text class="dot"></text>
+      <text>{{item}}</text>
+    </view>
+  </view>
+
+  <view class="section-title">
+    <text>动作步骤</text>
+  </view>
+  <view class="info-card card">
+    <view wx:for="{{item.steps}}" wx:key="*this" class="step-line">
+      <text class="step-index">{{index + 1}}</text>
+      <text>{{item}}</text>
+    </view>
+  </view>
+
+  <view class="section-title">
+    <text>常见错误</text>
+  </view>
+  <view class="info-card card">
+    <view wx:for="{{item.mistakes}}" wx:key="*this" class="line warn">
+      <text class="dot"></text>
+      <text>{{item}}</text>
+    </view>
+  </view>
+
+  <view class="safety card">
+    <text class="safety-title">安全提醒</text>
+    <text class="safety-text">{{item.safety}}</text>
+  </view>
+
+  <view class="beginner card">
+    <text class="beginner-title">新手推荐</text>
+    <text>{{item.beginner}}</text>
+  </view>
+</view>
+
+<view wx:else class="page">
+  <view class="empty card">
+    <text>没有找到这台器械。请回到图鉴重新选择。</text>
+  </view>
+</view>

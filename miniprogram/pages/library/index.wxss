@@ -1,0 +1,103 @@
+.search-card {
+  padding: 0 22rpx;
+}
+
+input {
+  height: 88rpx;
+  font-size: 28rpx;
+}
+
+.body-scroll {
+  width: 100%;
+  margin: 24rpx 0 6rpx;
+  white-space: nowrap;
+}
+
+.body-tabs {
+  display: inline-flex;
+  gap: 14rpx;
+  padding-bottom: 4rpx;
+}
+
+.body-tab {
+  min-width: 112rpx;
+  min-height: 64rpx;
+  padding: 0 24rpx;
+  border-radius: 999rpx;
+  color: #3f5149;
+  background: #ffffff;
+  border: 1rpx solid #dfe8e2;
+  font-size: 26rpx;
+}
+
+.body-tab.active {
+  color: #ffffff;
+  border-color: #147a58;
+  background: #147a58;
+  font-weight: 800;
+}
+
+.library-list {
+  display: grid;
+  gap: 18rpx;
+}
+
+.equipment-card {
+  padding: 24rpx;
+}
+
+.equipment-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16rpx;
+}
+
+.equipment-name {
+  display: block;
+  font-size: 34rpx;
+  font-weight: 850;
+}
+
+.equipment-meta,
+.equipment-motion,
+.empty {
+  color: #68756f;
+  font-size: 26rpx;
+  line-height: 1.55;
+}
+
+.equipment-meta {
+  display: block;
+  margin-top: 8rpx;
+}
+
+.equipment-motion {
+  display: block;
+  margin-top: 18rpx;
+}
+
+.arrow {
+  color: #147a58;
+  font-size: 46rpx;
+  font-weight: 300;
+}
+
+.feature-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rpx;
+  margin-top: 18rpx;
+}
+
+.feature-pill {
+  padding: 7rpx 12rpx;
+  border-radius: 999rpx;
+  color: #147a58;
+  background: #e4f7ef;
+  font-size: 22rpx;
+  font-weight: 750;
+}
+
+.empty {
+  padding: 26rpx;
+}
